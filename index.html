@@ -109,6 +109,9 @@
 
         /* About Me Section */
         #about .profile-photo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             border-radius: 50%;
             width: 220px;
             height: 220px;
@@ -426,6 +429,109 @@
                 margin: 0 10px;
             }
         }
+
+        /* Work Experience Section */
+#work-experience {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#work-experience h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#work-experience h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+
+.experience-item {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Separator between multiple experiences */
+}
+
+.experience-item:last-child {
+    border-bottom: none; /* No separator after the last item */
+}
+
+.experience-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3498db;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.experience-duration {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.experience-description {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.experience-responsibilities {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.experience-responsibilities li {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience-responsibilities li::before {
+    content: '\2022'; /* Bullet point */
+    color: #2c3e50;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Adjustments for Work Experience */
+@media (max-width: 768px) {
+    .experience-item h3 {
+        font-size: 1.5em;
+    }
+    .experience-duration {
+        font-size: 1em;
+    }
+    .experience-description,
+    .experience-responsibilities li {
+        font-size: 0.95em;
+    }
+}
     </style>
 </head>
 <body>
@@ -505,7 +611,23 @@
                 <li><i class="fas fa-handshake"></i> Financial Advisory: Strategic guidance on financial planning, cost reduction, and business growth.</li>
             </ul>
         </section>
-
+        <section id="work-experience">
+    <h2>Work Experience</h2>
+    <div class="experience-item">
+        <h3>Accountant | Indus Footwear</h3>
+        <p class="experience-duration">July 2023 - Present</p>
+        <p class="experience-description">
+            Currently serving as an Accountant at Indus Footwear, where I am responsible for managing daily financial operations, including ledger maintenance, bank reconciliations, and expense tracking. I also play a key role in preparing financial statements and ensuring compliance with GST and income tax regulations, contributing to accurate financial reporting and efficient tax management.
+        </p>
+        <ul class="experience-responsibilities">
+            <li>Managed daily bookkeeping and ledger entries, ensuring accuracy and compliance.</li>
+            <li>Prepared and reconciled bank statements, optimizing cash flow visibility.</li>
+            <li>Assisted in the timely filing of GST returns and income tax (ITR), ensuring regulatory adherence.</li>
+            <li>Contributed to the preparation of comprehensive financial reports, including Balance Sheets and Profit & Loss statements.</li>
+            <li>Supported internal audit processes and ensured robust financial controls.</li>
+        </ul>
+    </div>
+    </section>
         <section id="portfolio">
             <h2>My Work & Case Studies</h2>
             <div class="portfolio-grid">
@@ -581,14 +703,15 @@
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Address</h3>
-                    <p>Ward No. 5 Near Pushkarna Mandir, Khairthal(Alwar), 301404 ,Rajasthan 
+                    
+                    <p><a href="https://maps.app.goo.gl/eqzg4mEAAFH8bE2o7">Ward No. 5 Near Pushkarna Mandir, Khairthal(Alwar), 301404 ,Rajasthan</a> 
                     </p>
                 </div>
             </div>
              <div class="social-links">
-                <a href="#" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://in.linkedin.com/in/lucky-bhoorani-b92b2b368" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                 <a href="#" target="_blank" title="Facebook Profile"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank" title="Twitter Profile"><i class="fab fa-instagram"></i></a>
+                <a href="" target="_blank" title="Twitter Profile"><i class="fab fa-instagram"></i></a>
                 </div>
         </section>
     </div>
